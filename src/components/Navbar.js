@@ -12,14 +12,6 @@ export const Navbar = () => {
             activeClassName="active"
             className="nav-item nav-link"
             exact
-            to="/"
-          >
-            Home
-          </NavLink>
-          <NavLink
-            activeClassName="active"
-            className="nav-item nav-link"
-            exact
             to="/people"
           >
             People
@@ -38,7 +30,7 @@ export const Navbar = () => {
             exact
             to="/starShips"
           >
-            Start Ships
+            StartShips
           </NavLink>
           <NavLink
             activeClassName="active"
