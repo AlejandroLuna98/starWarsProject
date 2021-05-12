@@ -2,11 +2,11 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 export const Navbar = () => {
   return (
-    <nav className=" navbar navbar-expand-sm navbar-dark bg-dark justify-content-cente ">
-      <Link className="navbar-brand mx-3" to="/">
+    <nav className=" navbar navbar-expand-sm navbar-dark bgcolor d-sm-flex justify-content-center  ">
+      <Link className="navbar-brand mx-3" to="/Home">
         Wiki Star Wars
       </Link>
-      <div className="navbar-collapse mx-3 d-flex jsutify-content-center">
+      <div className="navbar-collapse mx-3 text-center">
         <div className="navbar-nav">
           <NavLink
             activeClassName="active"

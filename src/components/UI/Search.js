@@ -15,7 +15,7 @@ export const Search = () => {
   return (
     <>
       <form
-        className="m-0 p-0  d-flex  py-1  d-flex d-flex justify-content-center"
+        className="m-0 p-0  d-flex  py-1  d-flex d-flex justify-content-center "
         onSubmit={handleSubmit}
       >
         <input
@@ -23,14 +23,13 @@ export const Search = () => {
           type="text"
           value={inputValue}
           onChange={handleInputChange}
-          placeholder="What do you want to search?"
+          placeholder="Search..."
         />
         <input
           type="submit"
-          className="btn btn-large btn-dark mx-2"
+          className="btn btn-large btn-warning mx-2"
           value="Search"
         />
-        
       </form>
     </>
   );
