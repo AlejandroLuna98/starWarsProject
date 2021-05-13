@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { CardPeople } from "./UI/CardPeople";
 import * as ReactBootStrap from "react-bootstrap";
+import { PeopleScreen } from "./UI/PeopleScreen";
 export const People = () => {
   const [people, setPeople] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -30,7 +31,7 @@ export const People = () => {
   return (
     <>
       <div className="container container-screens rounded mt-4  animate__animated  animate__fadeIn ">
-        <h1 className="text-center my-2 py-3">People Screen</h1>
+        <h1 className="text-center my-2 py-3">People </h1>
 
         <div className="row  justify-content-center mb-3">
           <input
@@ -43,8 +44,8 @@ export const People = () => {
               }
             }}
             type="submit"
-            className="btn col-4 col-md-3 btn btn-warning mx-2"
-            value="+10"
+            className="btn col-4 col-md-3 btn btn-warning mx-2 fw-bold"
+            value="Next"
           />
           <input
             onClick={() => {
@@ -56,8 +57,8 @@ export const People = () => {
               }
             }}
             type="submit"
-            className="btn col-4 col-md-3 btn btn-warning mx-2"
-            value="-10"
+            className="btn col-4 col-md-3 btn btn-warning mx-2 fw-bold"
+            value="Previous"
           />
         </div>
 

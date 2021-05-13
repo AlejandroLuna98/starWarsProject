@@ -12,6 +12,7 @@ import { Home } from "../components/Home";
 import { Planets } from "../components/Planets";
 import { StarShips } from "../components/StarShips";
 import { Vehicles } from "../components/Vehicles";
+import { PeopleScreen } from "../components/UI/PeopleScreen";
 export const AppRouter = () => {
   return (
     <Router>
@@ -21,6 +22,7 @@ export const AppRouter = () => {
         <Switch>
           <Route exact path="/Home" component={Home} />
           <Route exact path="/People" component={People} />
+          <Route exact path="/People/:name" component={PeopleScreen} />
           <Route exact path="/Planets" component={Planets} />
           <Route exact path="/StarShips" component={StarShips} />
           <Route exact path="/Vehicles" component={Vehicles} />

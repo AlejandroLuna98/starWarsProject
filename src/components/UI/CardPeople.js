@@ -1,10 +1,11 @@
 import React, { Fragment } from "react";
-
-export const CardPeople = ({ people }) => {
-  //   console.log(people);
+import { Link } from "react-router-dom";
+import { PeopleScreen } from "./PeopleScreen";
+export const CardPeople = ({ people, id }) => {
+  // console.log(people);
   return (
     <Fragment>
-      <div className="card mx-3 my-1 bg-light col-md-5 ">
+      <div className="card mx-3 my-1 bg-light col-md-5 mb-4">
         <div className="card-body row">
           <div className="col-md-6">
             <h2 className="card-title text-center py-4">{people.name}</h2>
@@ -18,7 +19,14 @@ export const CardPeople = ({ people }) => {
             </p>
 
             <p className="card-text">
-              <small className="text-mued">More...</small>
+              {/* <Link
+                to={{
+                  pathname: `./people/${people.name}`,
+ 
+                }}
+              >
+               
+              </Link> More... */}
             </p>
           </div>
         </div>

@@ -3,7 +3,7 @@ import React, { Fragment } from "react";
 export const CardVehicles = ({ vehicles }) => {
   return (
     <Fragment>
-      <div className="card mx-3 my-1 bg-light col-md-5 ">
+      <div className="card mx-3 my-1 bg-light col-md-5 mb-4">
         <div className="card-body row">
           <div className="col-md-6">
             <h2 className="card-title text-center py-4">{vehicles.name}</h2>

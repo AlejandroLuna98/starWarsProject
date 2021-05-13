@@ -31,7 +31,7 @@ export const StarShips = () => {
   return (
     <>
       <div className="container container-screens rounded mt-4 animate__animated  animate__fadeIn">
-        <h1 className="text-center my-2 py-3">StarShips Screen</h1>
+        <h1 className="text-center my-2 py-3">StarShips </h1>
 
         <div className="row  justify-content-center mb-3">
           <input
@@ -44,8 +44,8 @@ export const StarShips = () => {
               }
             }}
             type="submit"
-            className="btn col-4 col-md-3 btn btn-warning mx-2"
-            value="+10"
+            className="btn col-4 col-md-3 btn btn-warning mx-2 fw-bold"
+            value="Next"
           />
           <input
             onClick={() => {
@@ -57,8 +57,8 @@ export const StarShips = () => {
               }
             }}
             type="submit"
-            className="btn col-4 col-md-3 btn btn-warning mx-2"
-            value="-10"
+            className="btn col-4 col-md-3 btn btn-warning mx-2 fw-bold"
+            value="Previous"
           />
         </div>
         <div className=" row justify-content-center mb-3 pb-4 mx-2 px-0 animate__animated  animate__fadeIn">
