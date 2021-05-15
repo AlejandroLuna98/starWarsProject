@@ -22,7 +22,11 @@ export const AppRouter = () => {
         <Switch>
           <Route exact path="/Home" component={Home} />
           <Route exact path="/People" component={People} />
-          <Route exact path="/People/:name" component={PeopleScreen} />
+          <Route
+            exact
+            path="/People/:name/:birth_year/:height/:mass/:hair_color/:skin_color/:eye_color/:gender"
+            component={PeopleScreen}
+          />
           <Route exact path="/Planets" component={Planets} />
           <Route exact path="/StarShips" component={StarShips} />
           <Route exact path="/Vehicles" component={Vehicles} />

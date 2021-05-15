@@ -1,26 +1,85 @@
+// Globals
+body {
+  background: rgba(229, 220, 221, 1);
+  background: -moz-linear-gradient(
+    left,
+    rgba(229, 220, 221, 1) 0%,
+    rgba(211, 208, 207, 0.79) 51%,
+    rgba(198, 195, 194, 0.76) 58%,
+    rgba(191, 187, 186, 0.76) 62%
+  );
+  background: -webkit-gradient(
+    left top,
+    right top,
+    color-stop(0%, rgba(229, 220, 221, 1)),
+    color-stop(51%, rgba(211, 208, 207, 0.79)),
+    color-stop(58%, rgba(198, 195, 194, 0.76)),
+    color-stop(62%, rgba(191, 187, 186, 0.76))
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgba(229, 220, 221, 1) 0%,
+    rgba(211, 208, 207, 0.79) 51%,
+    rgba(198, 195, 194, 0.76) 58%,
+    rgba(191, 187, 186, 0.76) 62%
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(229, 220, 221, 1) 0%,
+    rgba(211, 208, 207, 0.79) 51%,
+    rgba(198, 195, 194, 0.76) 58%,
+    rgba(191, 187, 186, 0.76) 62%
+  );
+  background: -ms-linear-gradient(
+    left,
+    rgba(229, 220, 221, 1) 0%,
+    rgba(211, 208, 207, 0.79) 51%,
+    rgba(198, 195, 194, 0.76) 58%,
+    rgba(191, 187, 186, 0.76) 62%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(229, 220, 221, 1) 0%,
+    rgba(211, 208, 207, 0.79) 51%,
+    rgba(198, 195, 194, 0.76) 58%,
+    rgba(191, 187, 186, 0.76) 62%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5dcdd', endColorstr='#bfbbba', GradientType=1 );
+}
+h1 {
+  color: #fff;
+}
 span {
   font-weight: bold;
+  color: #ffc107;
+}
+.bgcolor {
+  background-color: #000033;
 }
 .card {
   h2 {
     font-weight: bold;
     font-size: 30px;
   }
+  .link {
+    color: #000;
+    text-decoration: none;
+  }
 }
+
 .container-screens {
   background-color: #000033;
   border-radius: 6px;
   h1 {
-    color: #f2f2f2;
     font-size: 40px;
   }
   input {
     font-weight: medium;
   }
 }
-.bgcolor {
-  background-color: #000033;
-}
-.home {
-  position: relative;
+//Screems
+
+.screens {
+  color: #fff;
+  font-weight: normal;
 }

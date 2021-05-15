@@ -1,32 +1,39 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
-import { PeopleScreen } from "./PeopleScreen";
-export const CardPeople = ({ people, id }) => {
-  // console.log(people);
+export const CardPeople = ({ people }) => {
+  let {
+    name,
+    birth_year,
+    height,
+    mass,
+    hair_color,
+    skin_color,
+    eye_color,
+    gender,
+  } = people;
+
   return (
     <Fragment>
       <div className="card mx-3 my-1 bg-light col-md-5 mb-4">
         <div className="card-body row">
           <div className="col-md-6">
-            <h2 className="card-title text-center py-4">{people.name}</h2>
+            <h2 className="card-title text-center py-4">{name}</h2>
           </div>
           <div className="col-md-6">
             <p className="card-text">
-              <span>Height:</span> {people.height}
+              <span>Height:</span> {height}
             </p>
             <p className="card-text">
-              <span>Birth:</span> {people.birth_year}
+              <span>Birth:</span> {birth_year}
             </p>
 
             <p className="card-text">
-              {/* <Link
-                to={{
-                  pathname: `./people/${people.name}`,
- 
-                }}
+              <Link
+                className="btn btn-dark"
+                to={`./people/${name}/${birth_year}/${height}/${hair_color}/${skin_color}/${mass}/${eye_color}/${gender}`}
               >
-               
-              </Link> More... */}
+                More
+              </Link>
             </p>
           </div>
         </div>

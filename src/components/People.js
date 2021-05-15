@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { CardPeople } from "./UI/CardPeople";
+
 import * as ReactBootStrap from "react-bootstrap";
-import { PeopleScreen } from "./UI/PeopleScreen";
+
+// import { act } from "react-dom/test-utils";
 export const People = () => {
   const [people, setPeople] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -13,12 +15,18 @@ export const People = () => {
     return fetch(page);
   };
   useEffect(() => {
-    fetchPeople(actual)
+    fetchPeople(actual, {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    })
       .then((response) => {
         return response.json();
       })
       .then((data) => {
         let { results, next, previous } = data;
+
         // console.log(results);
         setLoading(true);
         setPreviousPage(previous);
@@ -64,8 +72,9 @@ export const People = () => {
 
         <div className=" row justify-content-center mb-3 pb-4 mx-2 px-0 animate__animated  animate__fadeIn">
           {loading ? (
-            people.map((people, id) => {
-              return <CardPeople people={people} key={id} />;
+            people.map((people) => {
+              // console.log(url);
+              return <CardPeople people={people} key={people.url} />;
             })
           ) : (
             <ReactBootStrap.Spinner animation="grow" variant="warning" />
