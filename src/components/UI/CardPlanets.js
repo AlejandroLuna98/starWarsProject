@@ -1,23 +1,40 @@
 import React, { Fragment } from "react";
-
+import { Link } from "react-router-dom";
 export const CardPlanets = ({ planets }) => {
+  let {
+    name,
+    rotation_period,
+    orbital_period,
+    diameter,
+    climate,
+    gravity,
+    terrain,
+    surface_water,
+    population,
+  } = planets;
+
   return (
     <Fragment>
       <div className="card mx-3 my-1 bg-light col-md-5 mb-4">
         <div className="card-body row">
           <div className="col-md-6">
-            <h2 className="card-title text-center py-4">{planets.name}</h2>
+            <h2 className="card-title text-center py-4">{name}</h2>
           </div>
           <div className="col-md-6">
             <p className="card-text">
-              <span>Rotation Period:</span> {planets.rotation_period}
+              <span>Rotation Period:</span> {rotation_period}
             </p>
             <p className="card-text">
-              <span>Orbital Period:</span> {planets.orbital_period}
+              <span>Orbital Period:</span> {orbital_period}
             </p>
 
             <p className="card-text">
-              <small className="text-mued">More...</small>
+              <Link
+                className="btn btn-dark"
+                to={`./planets/${name}/${rotation_period}/${orbital_period}/${diameter}/${climate}/${gravity}/${terrain}/${surface_water}/${population}`}
+              >
+                More
+              </Link>
             </p>
           </div>
         </div>

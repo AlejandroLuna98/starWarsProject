@@ -12,13 +12,13 @@ import { Home } from "../components/Home";
 import { Planets } from "../components/Planets";
 import { StarShips } from "../components/StarShips";
 import { Vehicles } from "../components/Vehicles";
-import { PeopleScreen } from "../components/UI/PeopleScreen";
+import { PeopleScreen } from "../components/screens/PeopleScreen";
+import { PlanetsScreen } from "../components/screens/PlanetsScreen";
 export const AppRouter = () => {
   return (
     <Router>
       <>
         <Navbar />
-
         <Switch>
           <Route exact path="/Home" component={Home} />
           <Route exact path="/People" component={People} />
@@ -28,6 +28,11 @@ export const AppRouter = () => {
             component={PeopleScreen}
           />
           <Route exact path="/Planets" component={Planets} />
+          <Route
+            exact
+            path="/Planets/:name/:rotation_period/:orbital_period/:diameter/:climate/:gravity/:terrain/:surface_water/:population"
+            component={PlanetsScreen}
+          />
           <Route exact path="/StarShips" component={StarShips} />
           <Route exact path="/Vehicles" component={Vehicles} />
           <Redirect to="/Home" component={Home} />
