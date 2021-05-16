@@ -13,7 +13,7 @@ export const PeopleScreen = () => {
     eye_color,
     gender,
   } = useParams();
-
+  console.log(name);
   return (
     <>
       <div className="container screens container-screens bordered rounded mt-4  animate__animated  animate__fadeIn">

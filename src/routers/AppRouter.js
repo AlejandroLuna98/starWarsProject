@@ -14,6 +14,8 @@ import { StarShips } from "../components/StarShips";
 import { Vehicles } from "../components/Vehicles";
 import { PeopleScreen } from "../components/screens/PeopleScreen";
 import { PlanetsScreen } from "../components/screens/PlanetsScreen";
+import { StarShipsScreen } from "../components/screens/StarShipsScreen";
+import { VehiclesScreen } from "../components/screens/VehiclesScreen";
 export const AppRouter = () => {
   return (
     <Router>
@@ -34,7 +36,13 @@ export const AppRouter = () => {
             component={PlanetsScreen}
           />
           <Route exact path="/StarShips" component={StarShips} />
+          <Route
+            exact
+            path="/Starships/:name/:model/:manufacturer/:cost_in_credits/:length/:max_atmosphering_speed/:crew/:passengers/:cargo_capacity/:consumables/:hyperdrive_rating/:MGLT/:starship_class"
+            component={StarShipsScreen}
+          />
           <Route exact path="/Vehicles" component={Vehicles} />
+          <Route exact path="" component={VehiclesScreen} />
           <Redirect to="/Home" component={Home} />
         </Switch>
       </>

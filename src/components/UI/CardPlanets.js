@@ -12,7 +12,7 @@ export const CardPlanets = ({ planets }) => {
     surface_water,
     population,
   } = planets;
-
+  console.log(planets);
   return (
     <Fragment>
       <div className="card mx-3 my-1 bg-light col-md-5 mb-4">

@@ -1,19 +1,23 @@
 import React from "react";
 import { useParams } from "react-router";
 
-export const PlanetsScreen = () => {
+export const StarShipsScreen = () => {
   const {
     name,
-    rotation_period,
-    orbital_period,
-    diameter,
-    climate,
-    gravity,
-    terrain,
-    surface_water,
-    population,
+    model,
+    manufacturer,
+    cost_in_credits,
+    length,
+    max_atmosphering_speed,
+    crew,
+    passengers,
+    cargo_capacity,
+    consumables,
+    hyperdrive_rating,
+    MGLT,
+    starship_class,
   } = useParams();
-
+ 
   return (
     <>
       <div className="container screens container-screens bordered rounded mt-4  animate__animated  animate__fadeIn">
@@ -23,30 +27,53 @@ export const PlanetsScreen = () => {
         <div className="row">
           <div className="col-md-6 mt-5">
             <h5 className="text-center pb-3 screem">
-              <span>Rotation Period:</span> {rotation_period}
+              <span> Model:</span>
+              {model}
             </h5>
 
             <h5 className="text-center pb-3 screem">
-              <span>Orbital Period:</span> {orbital_period}
+              <span>Manufacturer: </span>
+              {manufacturer}
             </h5>
             <h5 className="text-center pb-3 screem">
-              <span>Diameter:</span> {diameter}
+              <span>Cost in Credits: </span>
+              {cost_in_credits}
             </h5>
             <h5 className="text-center pb-3 screem">
-              <span>Climate:</span> {climate}
+              <span>Length: </span>
+              {length}
             </h5>
             <h5 className="text-center pb-3 screem">
-              <span>Gravity:</span> {gravity}
+              <span>Max Atmosphering Speed: </span>
+              {max_atmosphering_speed}
             </h5>
             <h5 className="text-center pb-3 screem">
-              <span>Terrain:</span> {terrain}
-            </h5>
-
-            <h5 className="text-center pb-3 screem">
-              <span>Surface Water:</span> {surface_water}
+              <span>Crew: </span>
+              {crew}
             </h5>
             <h5 className="text-center pb-3 screem">
-              <span>Population:</span> {population}
+              <span>Passengers: </span>
+              {passengers}
+            </h5>
+            <h5 className="text-center pb-3 screem">
+              <span>Cargo Capacity: </span>
+              {cargo_capacity}
+            </h5>
+            <h5 className="text-center pb-3 screem">
+              <span>Consumables: </span>
+              {consumables}
+            </h5>
+            <h5 className="text-center pb-3 screem">
+              <span>Hyperdrive Rating: </span>
+              {hyperdrive_rating}
+            </h5>
+            <h5 className="text-center pb-3 screem">
+              <span>MGLT: </span>
+              {MGLT}
+            </h5>
+            <h5 className="text-center pb-3 screem">
+              <span>Starship Class: </span>
+              {starship_class}
             </h5>
           </div>
 

@@ -36,19 +36,6 @@ export const StarShips = () => {
         <div className="row  justify-content-center mb-3">
           <input
             onClick={() => {
-              if (nextPage !== null) {
-                setPreviousPage(actual);
-                setActual(nextPage);
-              } else {
-                // console.log("error");
-              }
-            }}
-            type="submit"
-            className="btn col-4 col-md-3 btn btn-warning mx-2 fw-bold"
-            value="Next"
-          />
-          <input
-            onClick={() => {
               if (previousPage !== null) {
                 setActual(previousPage);
                 setNextPage(actual);
@@ -59,6 +46,19 @@ export const StarShips = () => {
             type="submit"
             className="btn col-4 col-md-3 btn btn-warning mx-2 fw-bold"
             value="Previous"
+          />
+          <input
+            onClick={() => {
+              if (nextPage !== null) {
+                setPreviousPage(actual);
+                setActual(nextPage);
+              } else {
+                // console.log("error");
+              }
+            }}
+            type="submit"
+            className="btn col-4 col-md-3 btn btn-warning mx-2 fw-bold"
+            value="Next"
           />
         </div>
         <div className=" row justify-content-center mb-3 pb-4 mx-2 px-0 animate__animated  animate__fadeIn">

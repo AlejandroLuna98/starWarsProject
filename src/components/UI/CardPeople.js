@@ -12,6 +12,11 @@ export const CardPeople = ({ people }) => {
     gender,
   } = people;
 
+  if (hair_color == "n/a" || gender == "n/a") {
+    hair_color = "none";
+    gender = "none";
+  }
+
   return (
     <Fragment>
       <div className="card mx-3 my-1 bg-light col-md-5 mb-4">
