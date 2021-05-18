@@ -42,7 +42,11 @@ export const AppRouter = () => {
             component={StarShipsScreen}
           />
           <Route exact path="/Vehicles" component={Vehicles} />
-          <Route exact path="" component={VehiclesScreen} />
+          <Route
+            exact
+            path="/vehicles/:name/:model/:manufacturer/:cost_in_credits/:length/:max_atmosphering_speed/:crew/:passengers/:cargo_capacity/:consumables/:vehicle_class"
+            component={VehiclesScreen}
+          />
           <Redirect to="/Home" component={Home} />
         </Switch>
       </>

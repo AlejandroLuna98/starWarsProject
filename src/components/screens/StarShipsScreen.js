@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router";
+import { useHistory, useParams } from "react-router";
 
 export const StarShipsScreen = () => {
   const {
@@ -17,7 +17,14 @@ export const StarShipsScreen = () => {
     MGLT,
     starship_class,
   } = useParams();
- 
+  let history = useHistory();
+  const handleReturn = () => {
+    if (history.length <= 2) {
+      history.push("/");
+    } else {
+      history.goBack("");
+    }
+  };
   return (
     <>
       <div className="container screens container-screens bordered rounded mt-4  animate__animated  animate__fadeIn">
@@ -113,6 +120,12 @@ export const StarShipsScreen = () => {
               lacinia orci ac felis dictum mattis.
             </p>
           </div>
+          <button
+            className="btn btn-dark  justify-content-center py-2 mb-3 "
+            onClick={handleReturn}
+          >
+            Return
+          </button>
         </div>
       </div>
     </>

@@ -1,6 +1,20 @@
 import React, { Fragment } from "react";
+import { Link } from "react-router-dom";
 
 export const CardVehicles = ({ vehicles }) => {
+  let {
+    name,
+    model,
+    manufacturer,
+    cost_in_credits,
+    length,
+    max_atmosphering_speed,
+    crew,
+    passengers,
+    cargo_capacity,
+    consumables,
+    vehicle_class,
+  } = vehicles;
   return (
     <Fragment>
       <div className="card mx-3 my-1 bg-light col-md-5 mb-4">
@@ -17,7 +31,12 @@ export const CardVehicles = ({ vehicles }) => {
             </p>
 
             <p className="card-text">
-              <small className="text-mued">More...</small>
+              <Link
+                className="btn btn-dark"
+                to={`./vehicles/${name}/${model}/${manufacturer}/${cost_in_credits}/${length}/${max_atmosphering_speed}/${crew}/${passengers}/${cargo_capacity}/${consumables},/${vehicle_class}`}
+              >
+                More
+              </Link>
             </p>
           </div>
         </div>

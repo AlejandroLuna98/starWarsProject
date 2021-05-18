@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router";
+import { useHistory, useParams } from "react-router";
 
 export const PlanetsScreen = () => {
   const {
@@ -13,6 +13,16 @@ export const PlanetsScreen = () => {
     surface_water,
     population,
   } = useParams();
+
+  let history = useHistory();
+
+  const handleReturn = () => {
+    if (history.length <= 2) {
+      history.push("/");
+    } else {
+      history.goBack("");
+    }
+  };
 
   return (
     <>
@@ -86,6 +96,12 @@ export const PlanetsScreen = () => {
               lacinia orci ac felis dictum mattis.
             </p>
           </div>
+          <button
+            className="btn btn-dark  justify-content-center py-2 mb-3 "
+            onClick={handleReturn}
+          >
+            Return
+          </button>
         </div>
       </div>
     </>
