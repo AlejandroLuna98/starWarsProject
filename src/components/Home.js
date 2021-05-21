@@ -1,7 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Search } from "./UI/Search";
 export const Home = () => {
   const [search, setSearch] = useState("");
+
+  useEffect(() => {
+    const fetchSearch = async () => {
+      if (search === "") return;
+      const urlRoot = `https://swapi.dev/api/${search}`;
+      const res = await fetch(urlRoot);
+      const result = await res.json();
+      console.log(result);
+    };
+    fetchSearch();
+  }, [search]);
   return (
     <>
       <div className="container container-screens rounded  my-3 animate__animated animate__fadeIn ">

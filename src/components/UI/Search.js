@@ -1,17 +1,20 @@
 import React, { useState } from "react";
+import { Error } from "./Error";
 
-export const Search = () => {
+export const Search = ({ setSeatch }) => {
   const [inputValue, setInputValue] = useState("");
-  const handleInputChange = (e) => {
-    setInputValue(e.target.value);
-  };
+  const [error, setError] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (inputValue.trim().length > 2) {
-      setInputValue("");
-    }
-  };
 
+    if (inputValue.trim() === "") {
+      setError(true);
+      return;
+    }
+    setError(false);
+    setSeatch(inputValue);
+  };
   return (
     <>
       <form
@@ -21,8 +24,7 @@ export const Search = () => {
         <input
           className=" w-50  p-1"
           type="text"
-          value={inputValue}
-          onChange={handleInputChange}
+          onChange={(e) => setInputValue(e.target.value)}
           placeholder="Search..."
         />
         <input
@@ -31,6 +33,7 @@ export const Search = () => {
           value="Search"
         />
       </form>
+      {error ? <Error /> : null}
     </>
   );
 };
