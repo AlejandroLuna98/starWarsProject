@@ -54,17 +54,11 @@ export const Home = () => {
           </form>
         </div>
         <div className="row py-4">
-          <div className="col-2"></div>
-          <div className="col-8 bg-white ">
+          <div className="col-12 col-md-12 bg-white ">
             <p className="text-black">
-              {loading ? (
-                <pre>{JSON.stringify(data, null, 2)}</pre>
-              ) : (
-                <ReactBootStrap.Spinner animation="grow" variant="warning" />
-              )}
+              <pre>{JSON.stringify(data, null, 2)}</pre>
             </p>
           </div>
-          <div className="col-2"></div>
         </div>
         <div className="row py-4">
           <div className="col-md-4 col-12">

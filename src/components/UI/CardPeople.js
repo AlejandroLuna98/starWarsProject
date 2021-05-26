@@ -12,7 +12,7 @@ export const CardPeople = ({ people }) => {
     gender,
   } = people;
 
-  if (hair_color == "n/a" || gender == "n/a") {
+  if (hair_color === "n/a" || gender == "n/a") {
     hair_color = "none";
     gender = "none";
   }

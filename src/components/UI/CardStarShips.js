@@ -18,7 +18,7 @@ export const CardStarShips = ({ starShips }) => {
     starship_class,
   } = starShips;
 
-  if (passengers == "n/a" || max_atmosphering_speed == "n/a") {
+  if (passengers === "n/a" || max_atmosphering_speed == "n/a") {
     passengers = "none";
     max_atmosphering_speed = "none";
     // model = "none";
